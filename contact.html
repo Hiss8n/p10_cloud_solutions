@@ -5,9 +5,10 @@
   <button>Send</button>
 </form>
 <script>
+    const Url = 'https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnSkPr-Ni0QHpq1rpQ8yTi7bswQBrcTy8bv9r-Z6RtC77AeQibZJF-nhnEsXWvT2ZgyAPnjLxPVZg1EkYNN_NSVHqhfFyceDDghNyYtCmyPabfXmmSfDaagUt9eM5yhfI4nn0b6Yq8HEq4ubEaV4aisD6MUONjqnRbG9CnBZdLBz-d74mm1eQOn-yAh1ORmj_EFbjzrTmcabK3J-8fzkx8fNcGVItB3KHWIaMLsh_2_JGT6LKmpkvGXyA5YzrmaJGVWfkER7LmlmyxRVja98KGBflVoM_A&lib=MciKM7l6SiKIo0L7supn4dLSjiZfAAW87';
 document.getElementById('f').addEventListener('submit', function(e){
   e.preventDefault();
-  fetch('PASTE_WEB_APP_URL', {method:'POST', mode:'no-cors', body:new URLSearchParams(new FormData(e.target))})
+  fetch(Url, {method:'POST', mode:'no-cors', body:new URLSearchParams(new FormData(e.target))})
     .then(function(){ alert('Thanks! We will be in touch.'); e.target.reset(); });
 });
 </script>
