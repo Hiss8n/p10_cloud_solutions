@@ -5,7 +5,7 @@
   <button>Send</button>
 </form>
 <script>
-    const Url='https://script.google.com/macros/s/AKfycbw6JNOB_nA4oJ4LnMpewBXywIAmoI7Zi347wFr3_-rRlbfGJajosaxzNmsL2Ws7G8Ub/exec'
+const Url='https://script.google.com/macros/s/AKfycbw6JNOB_nA4oJ4LnMpewBXywIAmoI7Zi347wFr3_-rRlbfGJajosaxzNmsL2Ws7G8Ub/exec'
 document.getElementById('f').addEventListener('submit', function(e){
   e.preventDefault();
   fetch(Url, {method:'POST', mode:'no-cors', body:new URLSearchParams(new FormData(e.target))})
